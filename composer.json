@@ -1,0 +1,10 @@
+{
+    "name": "jonas.magalhaes/challenge",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "scripts": {
+        "tests": "phpunit"
+    }
+}

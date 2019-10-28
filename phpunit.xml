@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php" colors="true" verbose="true" stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Numbers">
+            <directory suffix="Test.php">./Tests</directory>
+        </testsuite>
+        <testsuite name="NaturalNumbers">
+            <directory suffix="Test.php">./Tests</directory>
+        </testsuite>
+        <testsuite name="MultiplesOfThree">
+            <directory suffix="Test.php">./Tests</directory>
+        </testsuite>
+        <testsuite name="MultiplesOfFive">
+            <directory suffix="Test.php">./Tests</directory>
+        </testsuite>
+        <testsuite name="MultiplesOfThreeAndFive">
+            <directory suffix="Test.php">./Tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
