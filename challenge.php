@@ -1,51 +1,88 @@
 <?php
 
+/**
+ * Interface Counter
+ */
 interface Counter
 {
     public function countNumbers();
 }
 
+/**
+ * Class Numbers
+ */
 class Numbers implements Counter
 {
     public $arrayNumbers;
     public $from;
     public $to;
 
-    public function setNumbers(array $arrayNumbers) {
+    /**
+     * @param array $arrayNumbers
+     */
+    public function setNumbers(array $arrayNumbers)
+    {
         $this->arrayNumbers = $arrayNumbers;
     }
 
-    public function setFrom(int $from) {
+    /**
+     * @param int $from
+     */
+    public function setFrom(int $from)
+    {
         $this->from = $from;
     }
 
-    public function setTo(int $to) {
+    /**
+     * @param int $to
+     */
+    public function setTo(int $to)
+    {
         $this->to = $to;
     }
 
-    public function countNumbers() {
+    public function countNumbers()
+    {
         for ($i = $this->from; $i <= $this->to; $i++) {
             $this->arrayNumbers[$i] = $i;
         }
     }
 
-    public function getNumbers() {
+    /**
+     * @return array
+     */
+    public function getNumbers(): array
+    {
         return $this->arrayNumbers;
     }
 }
 
+/**
+ * Class NaturalNumbers
+ */
 class NaturalNumbers extends Numbers
 {
-    public function __construct() {
+    /**
+     * NaturalNumbers constructor.
+     */
+    public function __construct()
+    {
         self::setNumbers([]);
         self::setFrom(0);
         self::setTo(100);
     }
 }
 
+/**
+ * Class MultiplesOfThree
+ */
 class MultiplesOfThree extends Numbers
 {
-    public function __construct() {
+    /**
+     * MultiplesOfThree constructor.
+     */
+    public function __construct()
+    {
         self::setNumbers([]);
         self::setFrom(3);
         self::setTo(100);
@@ -59,9 +96,16 @@ class MultiplesOfThree extends Numbers
     }
 }
 
+/**
+ * Class MultiplesOfFive
+ */
 class MultiplesOfFive extends Numbers
 {
-    public function __construct() {
+    /**
+     * MultiplesOfFive constructor.
+     */
+    public function __construct()
+    {
         self::setNumbers([]);
         self::setFrom(5);
         self::setTo(100);
@@ -75,9 +119,16 @@ class MultiplesOfFive extends Numbers
     }
 }
 
+/**
+ * Class MultiplesOfThreeAndFive
+ */
 class MultiplesOfThreeAndFive extends Numbers
 {
-    public function __construct() {
+    /**
+     * MultiplesOfThreeAndFive constructor.
+     */
+    public function __construct()
+    {
         self::setNumbers([]);
         self::setFrom(15);
         self::setTo(100);
@@ -116,6 +167,6 @@ ksort($subArray2);
 $finalArray = $arrayMultiplesOfThreeAndFive + $subArray2;
 ksort($finalArray);
 
-foreach($finalArray as $key => $value) {
+foreach ($finalArray as $key => $value) {
     echo $value . '<br />';
 }
