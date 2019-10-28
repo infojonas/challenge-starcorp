@@ -1,5 +1,17 @@
 <?php
 
+require 'Interfaces\CounterInterface.php';
+require 'Classes\Numbers.php';
+require 'Classes\NaturalNumbers.php';
+require 'Classes\MultiplesOfFive.php';
+require 'Classes\MultiplesOfThree.php';
+require 'Classes\MultiplesOfThreeAndFive.php';
+
+use Classes\MultiplesOfFive;
+use Classes\MultiplesOfThree;
+use Classes\MultiplesOfThreeAndFive;
+use Classes\NaturalNumbers;
+
 $naturalNumbersObj = new NaturalNumbers();
 $naturalNumbersObj->countNumbers();
 $arrayNaturalNumbers = $naturalNumbersObj->getNumbers();
